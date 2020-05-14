@@ -18,7 +18,7 @@ import {filterImageFromURL, deleteLocalFiles} from './util/util';
 
 
     if (!image_url) {
-      return res.status(422).send({ auth: true, message: 'image_url is required.' });
+      return res.status(422).send({ auth: true, message: 'Oops, URL not valid.' });
     }
 
     let filteredPath = await filterImageFromURL(image_url);
